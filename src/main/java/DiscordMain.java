@@ -25,9 +25,15 @@ public class DiscordMain extends ListenerAdapter {
     String it_gebabbel = "it-gebabbel";
     ctictactoe ticktacktoe;
     viergewind vier;
+    quis quiz;
 
     //Main create api conection to bot
     public static void main(String[] args) throws LoginException, IOException {
+
+        quis quiz2 = new quis();
+        quiz2.readquizze();
+        quiz2.start_add_quis("!test QuisName \nDas ist frage 1? Antwort1! Antwort2! %2");
+        //System.out.println(quiz2.loadQuiz("Baum"));
 
         String js_string = new String( Files.readAllBytes(Paths.get("token.json")));
         JSONObject js = new JSONObject(js_string);
