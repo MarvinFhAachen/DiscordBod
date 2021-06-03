@@ -17,7 +17,7 @@ public class ctictactoe {
 
     //ArrayList<ArrayList<String>> map;
     String[][] map = {  {con_e,con_e ,con_e},//[0][0]//[0][1] // 00     01  x
-                        {con_e,con_e ,con_e},
+                      {con_e,con_e ,con_e},
                         {con_e,con_e ,con_e}};                 //10     11
                                                                 //y
     String printmap(){
@@ -31,6 +31,8 @@ public class ctictactoe {
             }
             ret += "\n";
         }
+        if(wincheck())
+            ret += " \n Gewonnen";
 
         return ret ;
     }
@@ -56,7 +58,7 @@ public class ctictactoe {
 
         //change state
         state = !state;
-
+        //System.out.println(wincheck());
         return  true ;
     }
 
@@ -69,4 +71,31 @@ public class ctictactoe {
         }
     }
 
+    boolean wincheck(){
+        boolean win = false;
+        //horizontal
+        if(map[0][0].equalsIgnoreCase(map[0][1]) && map[0][1].equalsIgnoreCase(map[0][2]) && !map[0][0].equalsIgnoreCase(con_e))
+            win = true;
+        if(map[1][0].equalsIgnoreCase(map[1][1]) && map[1][1].equalsIgnoreCase(map[1][2])&& !map[1][0].equalsIgnoreCase(con_e))
+            win = true;
+        if(map[2][0].equalsIgnoreCase(map[2][1]) && map[2][1].equalsIgnoreCase(map[2][2])&& !map[2][0].equalsIgnoreCase(con_e))
+            win = true;
+
+        //vertical
+        if(map[0][0].equalsIgnoreCase(map[1][0]) && map[1][0].equalsIgnoreCase(map[2][0])&& !map[0][0].equalsIgnoreCase(con_e))
+            win = true;
+        if(map[0][1].equalsIgnoreCase(map[1][1]) && map[1][1].equalsIgnoreCase(map[2][1])&& !map[0][1].equalsIgnoreCase(con_e))
+            win = true;
+        if(map[0][2].equalsIgnoreCase(map[1][2]) && map[1][2].equalsIgnoreCase(map[2][2])&& !map[0][2].equalsIgnoreCase(con_e))
+            win = true;
+
+        //diagpnal up
+        if(map[0][0].equalsIgnoreCase(map[1][1]) && map[1][1].equalsIgnoreCase(map[2][2])&& !map[0][0].equalsIgnoreCase(con_e))
+            win = true;
+        //diagpnal down
+        if(map[0][2].equalsIgnoreCase(map[1][1]) && map[1][1].equalsIgnoreCase(map[2][0])&& !map[0][2].equalsIgnoreCase(con_e))
+            win = true;
+
+        return win;
+    }
 }
