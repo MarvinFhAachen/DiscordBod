@@ -30,7 +30,7 @@ public class DiscordMain extends ListenerAdapter {
 
         //Object obj = parser.parse(new FileReader("token.json"));
         JSONObject js = new JSONObject(new FileReader("token.json"));
-       
+
         //jda = new JDABuilder();//veraltet
         jda = JDABuilder.createDefault(token).build();
         jda.addEventListener(new DiscordMain());
