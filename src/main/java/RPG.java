@@ -1,5 +1,5 @@
 public class RPG {
-    static public String = "";
+    static public String test= " ";
 
 
 

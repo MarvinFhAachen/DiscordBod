@@ -1,26 +1,36 @@
+import jdk.nashorn.internal.parser.JSONParser;
 import net.dv8tion.jda.api.*;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.guild.react.GuildMessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import org.json.JSONObject;
+
 
 import javax.security.auth.login.LoginException;
 import java.awt.*;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
 //https://discord.com/developers/applications/849612919569776670/oauth2
 public class DiscordMain extends ListenerAdapter {
-
     public static JDA jda ;
+
+
     String it_gebabbel = "it-gebabbel";
     ctictactoe ticktacktoe;
     viergewind vier;
 
     //Main create api conection to bot
-    public static void main(String[] args) throws LoginException {
+    public static void main(String[] args) throws LoginException, FileNotFoundException {
         String token = "ODQ5NjEyOTE5NTY5Nzc2Njcw.YLdtsQ.PtIsPSe8LeD8WodHrPwzo0vbMKQ";
+
+        //Object obj = parser.parse(new FileReader("token.json"));
+        JSONObject js = new JSONObject(new FileReader("token.json"));
+       
         //jda = new JDABuilder();//veraltet
         jda = JDABuilder.createDefault(token).build();
         jda.addEventListener(new DiscordMain());
