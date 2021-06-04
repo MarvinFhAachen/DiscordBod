@@ -30,9 +30,9 @@ public class DiscordMain extends ListenerAdapter {
     //Main create api conection to bot
     public static void main(String[] args) throws LoginException, IOException {
 
-        quis quiz2 = new quis();
-        quiz2.readquizze();
-        quiz2.start_add_quis("!test QuisName \nDas ist frage 1? Antwort1! Antwort2! %2");
+        //quis quiz2 = new quis();
+        //quiz2.readquizze();
+        //quiz2.start_add_quis("!test QuisName \nDas ist frage 1? Antwort1! Antwort2! %2");
         //System.out.println(quiz2.loadQuiz("Baum"));
 
         String js_string = new String( Files.readAllBytes(Paths.get("token.json")));
@@ -82,6 +82,7 @@ public class DiscordMain extends ListenerAdapter {
             ticktacktoe = new ctictactoe();
             event.getChannel().sendMessage(ticktacktoe.printmap()).queue();
 
+
         }
         else if(args[0].equalsIgnoreCase("!4")){
             vier = new viergewind();
@@ -127,8 +128,9 @@ public class DiscordMain extends ListenerAdapter {
                      case   "RE:U+38U+20e3":ticktacktoe.makemove(8); break;
                      case   "RE:U+39U+20e3":ticktacktoe.makemove(9); break;
                  }
-                 message.delete().queue();
-                 event.getChannel().sendMessage(ticktacktoe.printmap()).queue();
+                 //message.delete().queue();
+                 //event.getChannel().sendMessage(ticktacktoe.printmap()).queue();
+                 message.editMessage(ticktacktoe.printmap()).queue();
              }
              else if(args[0].equalsIgnoreCase( ":video_game:VierGewinnt")){
 
@@ -142,7 +144,8 @@ public class DiscordMain extends ListenerAdapter {
                      case   "RE:U+37U+20e3":vier.makemove(7); break;
                  }
                 // message.delete().queue();
-                 event.getChannel().sendMessage(vier.printmap()).queue();
+                 //event.getChannel().sendMessage(vier.printmap()).queue();
+                 message.editMessage(vier.printmap()).queue();
              }
          }));
 
