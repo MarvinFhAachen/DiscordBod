@@ -41,7 +41,7 @@ public class DiscordMain extends ListenerAdapter {
         System.out.println(token);
         jda = JDABuilder.createDefault(token).build();
         
-        String s = "test";
+        Thread thread = new Thread();
         
         
 
