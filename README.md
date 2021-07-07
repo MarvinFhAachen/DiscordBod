@@ -37,3 +37,4 @@ Discord provides a web socket here, i play with it for my own little server.
 - LCD => qapass 1602a
 ### Conection
 
+## Images
