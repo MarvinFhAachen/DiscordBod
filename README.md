@@ -39,3 +39,4 @@ Discord provides a web socket here, i play with it for my own little server.
 
 ## Images
 ![dscordundlcd](images/Inked20210707_204258_LI.jpg)
+![dscordundlcd](images/3.png)
