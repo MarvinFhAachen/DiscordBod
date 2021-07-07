@@ -38,4 +38,4 @@ Discord provides a web socket here, i play with it for my own little server.
 ### Conection
 
 ## Images
-![dscordundlcd](images/20210707_204258_LI.jpg)
+![dscordundlcd](images/Inked20210707_204258_LI.jpg)
