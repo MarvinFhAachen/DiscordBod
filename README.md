@@ -1,42 +1,45 @@
-- [Platform & IDE]()
-- [idea]()
-- [1.commands]()
-- [2.Hardware]()
+- [IDE & Platform](#ide-and-platform)
+- [Idea](#idea)
+- [Commands](#commands)
+- [Hardware](#hardware)
+- [Images](#images)
 
-# DiscordBod
+# Discord Bots
 
-## IDE & Platform
+### IDE and Platform
 - VS Code
 - Maven
 - Need external "token.json" => {"token": "dashieristderdiscordbottoken"}
 
-## Idea
-Discord provides a web socket here, i play with it for my own little server.
+### Idea
+Discord provides a web socket here, I play with it for my own little server.
 
-## Commands
+### Commands
 
 ### !tick
-- makes a ticktacktoe play field
-- interact with the game with the "reactions"
+- makes a tic tac tow play field
+- interact with the game with Discord "reactions"
 
 ### !4
 - makes a 4wins play field
 - interact with the game with the "reactions"
 
 ### !essen
-- returns a random massage for a special chanle (in which are only food ideas)
+- returns a random recipe from the food channel when you can't decide what to cook today
 
 ### !help
-- gets list with all comands
+- gets list with all commands
 
-### !lcd <text to display on externel lcd // no space // max 2x16 chars>
+### !lcd 
+- example message "!lcd thisisatest"
+- prints the message on microcontroller lcd display
+- no spaces allows
+- max 2x16 characters
 
-## Hardware
-### Hartware
+### Hardware
 - PI3
 - LCD => qapass 1602a
-### Conection
 
-## Images
+### Images
 ![dscordundlcd](images/Inked20210707_204258_LI.jpg)
 ![dscordundlcd](images/3.jpg)
